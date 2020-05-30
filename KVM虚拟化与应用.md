@@ -16,13 +16,13 @@
 
 通过软件完全模拟CPU、芯片组、磁盘、网卡等计算机硬件。典型产品是Bochs，QEMU。
 
- ![1576299916(1)](https://github.com/orangehaswing/HCIA-CloudComputing/blob/master/resources/1576299916(1).jpg?raw=true)
+  ![1576299916(1)](resources\1576299916(1).jpg)
 
 **虚拟化层翻译**
 
 X86指令机分为4个特权模式：Ring 0(操作系统)；Ring 1(驱动程序)；Ring 2(驱动程勋)；Ring 3(应用程序)。
 
- ![1576300134(1)](https://github.com/orangehaswing/HCIA-CloudComputing/blob/master/resources/1576300134(1).jpg?raw=true)
+  ![1576300134(1)](resources\1576300134(1).jpg)
 
 通过虚拟化引擎，捕获虚拟机的指令并处理，但不能对硬件进行操作。称为软件全虚拟化方案。
 
@@ -37,7 +37,7 @@ Intel推出 VT - x，增加VMX root operation和VMX non-root operation。 称为
 - VMM运行在VMX root operation模式
 - 虚拟机运行在VMX non-root operation模式
 
-![1576300417(1)](https://github.com/orangehaswing/HCIA-CloudComputing/blob/master/resources/1576300417(1).jpg?raw=true)
+ ![1576300417(1)](resources\1576300417(1).jpg)
 
 **容器虚拟化**
 
@@ -47,7 +47,7 @@ Intel推出 VT - x，增加VMX root operation和VMX non-root operation。 称为
 
 KVM是内核一个模块，用户空间通过QEMU模拟硬件提供给虚拟机使用。
 
-![1576300750(1)](https://github.com/orangehaswing/HCIA-CloudComputing/blob/master/resources/1576300750(1).jpg?raw=true)
+ ![1576300750(1)](resources\1576300750(1).jpg)
 
 大多数平台通过Libvirt完成对KVM虚拟机的管理。
 
@@ -63,7 +63,7 @@ QEMU可以模拟的硬件：
 
 ### libvirt和KVM
 
-libvirt瑟吉欧虚拟化的管理工具，由3部分组成：
+libvirt是虚拟化的管理工具，由3部分组成：
 
 - 一套API的lib库，支持主流编程语言
 - libvirtd服务
@@ -94,7 +94,7 @@ libvirt支持远程宿主机管理，通道可以是：
 1. 开源
 2. 性能优异
 3. 免费
-4. =广泛免费的技术支持
+4. 广泛免费的技术支持
 
 ## CPU和内存虚拟化
 
@@ -106,7 +106,7 @@ libvirt支持远程宿主机管理，通道可以是：
 
 多个CPU通过一个总线访问存储器，被称为一直内存访问(UMA)
 
- ![1576301976(1)](https://github.com/orangehaswing/HCIA-CloudComputing/blob/master/resources/1576301976(1).jpg?raw=true)
+  ![1576301976(1)](resources\1576301976(1).jpg)
 
 **MPP技术**
 
@@ -116,9 +116,9 @@ libvirt支持远程宿主机管理，通道可以是：
 
 每个处理器都有自己的存储器，每个处理器也可以访问别的处理器的存储器。
 
- ![1576302197(1)](https://github.com/orangehaswing/HCIA-CloudComputing/blob/master/resources/1576302197(1).jpg?raw=true)
+  ![1576302197(1)](resources\1576302197(1).jpg)
 
- ![1576302228(1)](https://github.com/orangehaswing/HCIA-CloudComputing/blob/master/resources/1576302228(1).jpg?raw=true)
+  ![1576302228(1)](resources\1576302228(1).jpg)
 
 ### NUMA调优
 
